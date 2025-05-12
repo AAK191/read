@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f0f8ff; /* Light Alice Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-container {
+    background-color: #e6e6fa; /* Light Lavender */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    color: #6a5acd; /* Medium Slate Blue */
+    margin-bottom: 30px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #8a2be2; /* Blue Violet */
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc; /* Light Gray */
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #fffafa; /* Snow */
+}
+
+input:focus {
+    outline: none;
+    border-color: #dda0dd; /* Plum */
+    box-shadow: 0 0 8px rgba(221, 160, 221, 0.5);
+}
+
+.auth-button {
+    background-color: #b0e0e6; /* Powder Blue */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #87ceeb; /* Sky Blue */
+}
+
+.switch-form {
+    margin-top: 15px;
+    color: #778899; /* Light Slate Gray */
+}
+
+.switch-form a {
+    color: #6a5acd; /* Medium Slate Blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}

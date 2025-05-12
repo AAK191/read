@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+    <div class="pomodoro-container">
+        <header>
+            <h1>Pomodoro Timer</h1>
+            <div class="header-actions">
+                <div class="quick-settings">
+                    <label for="work-time-quick">Work:</label>
+                    <input type="number" id="work-time-quick" value="25" min="1" class="quick-input">
+                    <label for="break-time-quick">Break:</label>
+                    <input type="number" id="break-time-quick" value="5" min="1" class="quick-input">
+                    <button id="apply-quick-settings" class="quick-button">Apply</button>
+                </div>
+                <button id="settings-button">More Settings</button>
+                <button id="logout-button">Logout</button>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="timer-wrapper">
+                <div class="round-timer">
+                    <svg width="180" height="180">
+                        <circle cx="90" cy="90" r="80" stroke-width="10" stroke="#ddd" fill="none"/>
+                        <path id="timer-path" stroke-width="10" stroke="#87ceeb" fill="none" stroke-linecap="round" transform="translate(90, 90) rotate(-90)"/>
+                        <text id="timer-text" x="90" y="105" text-anchor="middle" font-size="20">25:00</text>
+                    </svg>
+                </div>
+                <div class="controls">
+                    <button id="start">Start</button>
+                    <button id="pause">Pause</button>
+                    <button id="reset">Reset</button>
+                </div>
+                <p id="status"></p>
+            </div>
+
+            <div class="features">
+                <div class="quote-container">
+                    <p id="study-quote" class="study-quote">"The key to success is not to prioritize what's on your schedule, but to schedule your priorities." - Stephen Covey</p>
+                </div>
+                <div class="todo-list">
+                    <h2>To-Do List</h2>
+                    <div class="add-todo">
+                        <input type="text" id="new-task" placeholder="Add new task">
+                        <button id="add-task">+</button>
+                    </div>
+                    <ul id="task-list">
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Listen to focus:</p>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M" target="_blank" rel="noopener noreferrer">Spotify Focus Playlist</a>
+        </footer>
+
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">×</span>
+                <h2>More Settings</h2>
+                <div class="setting-option">
+                    <label for="background-theme">Background Theme:</label>
+                    <select id="background-theme">
+                        <option value="default">Default</option>
+                        <option value="cafe">Cafe</option>
+                        <option value="library">Library</option>
+                        <option value="beach">Beach</option>
+                        <option value="old-diary">Old Diary Pages</option>
+                        <option value="garden">Garden</option>
+                        <option value="custom">Custom Color</option>
+                    </select>
+                </div>
+                <div class="setting-option" id="custom-color-picker" style="display: none;">
+                    <label for="background-color">Custom Background Color:</label>
+                    <input type="color" id="background-color" value="#f8f0e3">
+                </div>
+                <div class="setting-option">
+                    <label for="new-work-duration">Work Duration (min):</label>
+                    <input type="number" id="new-work-duration" value="25" min="1">
+                </div>
+                <div class="setting-option">
+                    <label for="new-break-duration">Break Duration (min):</label>
+                    <input type="number" id="new-break-duration" value="5" min="1">
+                </div>
+                <div class="setting-option">
+                    <label for="notification-sound">Notifications:</label>
+                    <input type="checkbox" id="notification-sound" checked>
+                </div>
+                <button id="save-settings">Save Settings</button>
+
+                <h3>Weekly Focus Statistics</h3>
+                <div id="weekly-stats">
+                    <p>This week's focus: <span id="total-focus-time">0</span> hours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="pomodoro.js"></script>
+</body>
+</html>

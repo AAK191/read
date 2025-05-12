@@ -1,0 +1,399 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f8f0e3; /* Linen (Default) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+body.cafe-theme {
+    background-image: url('images/cafe-background.jpg');
+    background-color: #a36247; /* Example cafe color */
+}
+
+body.library-theme {
+    background-image: url('images/library-background.jpg');
+    background-color: #d1c4e9; /* Example library color */
+}
+
+body.beach-theme {
+    background-image: url('images/beach-background.jpg');
+    background-color: #e0f2f7; /* Example beach color */
+}
+
+body.old-diary-theme {
+    background-image: url('images/old-diary-background.jpg');
+    background-color: #f4f0e8; /* Example old diary color */
+}
+
+body.garden-theme {
+    background-image: url('images/garden-background.jpg');
+    background-color: #aed581; /* Example garden color */
+}
+
+.pomodoro-container {
+    background-color: #fff8dc; /* Cornsilk */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center; /* Align quick settings with other buttons */
+}
+
+.quick-settings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quick-settings label {
+    color: #778899; /* LightSlateGray */
+    font-size: 14px;
+}
+
+.quick-settings input[type="number"].quick-input {
+    width: 40px;
+    padding: 6px;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.quick-settings button.quick-button {
+    background-color: #8fbc8f; /* DarkSeaGreen */
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.quick-settings button.quick-button:hover {
+    background-color: #556b2f; /* DarkOliveGreen */
+}
+
+header h1 {
+    color: #a0522d; /* Sienna */
+    margin: 0;
+}
+
+header button {
+    background-color: #d2b48c; /* Tan */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #b8860b; /* DarkGoldenrod */
+}
+
+.main-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.round-timer {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+.round-timer svg {
+    width: 100%;
+    height: 100%;
+}
+
+#timer-path {
+    transition: stroke-dashoffset 0.2s linear;
+    stroke: #87ceeb; /* Sky Blue - for the progress circle */
+}
+
+#timer-text {
+    font-weight: bold;
+    color: #556b2f; /* Dark Olive Green - for the time text */
+    font-size: 20px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+}
+
+.controls button {
+    background-color: #e0eee0; /* Light Cyan */
+    color: #2e8b57; /* Sea Green */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #98fb98; /* PaleGreen */
+}
+
+#status {
+    margin-top: 20px;
+    color: #8fbc8f; /* DarkSeaGreen */
+    font-weight: bold;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+}
+
+.quote-container {
+    background-color: #f0fff0; /* Honeydew */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.study-quote {
+    color: #483d8b; /* DarkSlateBlue */
+    font-style: italic;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+.todo-list, .settings {
+    background-color: #f0fff0; /* Honeydew */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.todo-list h2, .settings h2 {
+    color: #20b2aa; /* LightSeaGreen */
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.add-todo {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.add-todo input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #d3d3d3; /* LightGray */
+    border-radius: 6px 0 0 6px;
+    font-size: 16px;
+}
+
+.add-todo button {
+    background-color: #3cb371; /* MediumSeaGreen */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-todo button:hover {
+    background-color: #2e8b57; /* SeaGreen */
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#task-list li:last-child {
+    border-bottom: none;
+}
+
+#task-list li span {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #555;
+}
+
+#task-list li.completed span {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+#task-list li button {
+    background: none;
+    border: none;
+    color: #ff6347; /* Tomato */
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 30px;
+    color: #778899; /* LightSlateGray */
+}
+
+footer a {
+    color: #6a5acd; /* MediumSlateBlue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Settings Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+
+.modal.active {
+    display: block;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.setting-option {
+    margin-bottom: 15px;
+}
+
+.setting-option label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.setting-option input[type="color"],
+.setting-option input[type="number"],
+.setting-option input[type="checkbox"],
+.setting-option select { /* Added style for select */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%; /* Make select take full width */
+}
+
+.setting-option input[type="number"] {
+    width: 60px;
+}
+
+#save-settings {
+    background-color: #5f9ea0; /* CadetBlue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#save-settings:hover {
+    background-color: #4682b4; /* SteelBlue */
+}
+
+#weekly-stats {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e6f7ff; /* Light Cyan-ish */
+    border-radius: 8px;
+    color: #333;
+    text-align: center;
+}
+
+#total-focus-time {
+    font-weight: bold;
+    color: #2e8b57; /* SeaGreen */
+}
